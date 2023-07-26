@@ -1,6 +1,13 @@
 import React from "react";
-import { Badge, Container, Dropdown, FormControl, Navbar, NavbarBrand } from "react-bootstrap";
-import {FaShoppingCart} from 'react-icons/fa'
+import {
+  Badge,
+  Container,
+  Dropdown,
+  FormControl,
+  Navbar,
+  NavbarBrand,
+} from "react-bootstrap";
+import { FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 // import style from '.app.css'
 
@@ -9,7 +16,7 @@ const Header = () => {
     <Navbar bg="dark" variant="dark">
       <Container>
         <Navbar.Brand>
-          <Link to='/'>E-Commerce</Link>
+          <Link to="/">E-Commerce</Link>
           {/* <a href="/">E-Commerce</a> */}
         </Navbar.Brand>
         <Navbar.Text className="search">
@@ -19,14 +26,14 @@ const Header = () => {
             style={{ width: 500 }}
           ></FormControl>
         </Navbar.Text>
-        <Dropdown align={'right'}>
+        <Dropdown align={"right"}>
           <Dropdown.Toggle variant="success" id="dropdown-basic">
-          <FaShoppingCart  color="white" fontSize="25px"/>
+            <FaShoppingCart color="white" fontSize="25px" />
             <Badge>{5}</Badge>
           </Dropdown.Toggle>
 
-          <Dropdown.Menu style={{minWidth:370}}>
-           <span style={{padding:10}}>Cart is empty</span>
+          <Dropdown.Menu style={{ minWidth: 370 }}>
+            <span style={{ padding: 10 }}>Cart is empty</span>
           </Dropdown.Menu>
         </Dropdown>
       </Container>

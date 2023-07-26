@@ -8,7 +8,7 @@ import Cart from "./components/Cart";
 function App() {
   return (
     <BrowserRouter>
-      <div className="App">
+    
         <Header />
         <div>
           <Routes>
@@ -17,7 +17,7 @@ function App() {
             <Route path="/cart" element={<Cart />} />
           </Routes>
         </div>
-      </div>
+    
     </BrowserRouter>
   );
 }
