@@ -1,6 +1,7 @@
 import React from "react";
 import { Badge, Container, Dropdown, FormControl, Navbar, NavbarBrand } from "react-bootstrap";
 import {FaShoppingCart} from 'react-icons/fa'
+import { Link } from "react-router-dom";
 // import style from '.app.css'
 
 const Header = () => {
@@ -8,7 +9,8 @@ const Header = () => {
     <Navbar bg="dark" variant="dark">
       <Container>
         <Navbar.Brand>
-          <a href="/">E-Commerce</a>
+          <Link to='/'>E-Commerce</Link>
+          {/* <a href="/">E-Commerce</a> */}
         </Navbar.Brand>
         <Navbar.Text className="search">
           <FormControl
