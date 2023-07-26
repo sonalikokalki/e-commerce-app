@@ -1,5 +1,7 @@
 import React from "react";
 import { Badge, Container, Dropdown, FormControl, Navbar, NavbarBrand } from "react-bootstrap";
+import {FaShoppingCart} from 'react-icons/fa'
+// import style from '.app.css'
 
 const Header = () => {
   return (
@@ -15,10 +17,10 @@ const Header = () => {
             style={{ width: 500 }}
           ></FormControl>
         </Navbar.Text>
-        <Dropdown>
+        <Dropdown align={'right'}>
           <Dropdown.Toggle variant="success" id="dropdown-basic">
-          <FaShoppingCart/>
-            <Badge>5</Badge>
+          <FaShoppingCart  color="white" fontSize="25px"/>
+            <Badge>{5}</Badge>
           </Dropdown.Toggle>
 
           <Dropdown.Menu style={{minWidth:370}}>
