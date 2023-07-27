@@ -8,3 +8,19 @@
     padding: 20px;
     justify-content: space-around;
 }
+.filters{
+    background-color: #343a40;
+    height: 86vh;
+    width: 20%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* align-items: center; */
+    /* justify-content: center; */
+    padding: 20px;
+    margin: 15px;
+}
+.filter-title{
+    font-size: 2rem;
+}
