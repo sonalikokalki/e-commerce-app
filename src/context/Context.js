@@ -7,7 +7,7 @@ const Cart = createContext();
 const url = "https://fakestoreapi.com/products";
 
 const Context = ({ children }) => {
-  const products = [...Array(20)].map(() => ({
+  const products = [...Array(21)].map(() => ({
     id: faker.string.uuid(),
     description: faker.commerce.productDescription(),
     name: faker.commerce.productName(),
@@ -18,7 +18,6 @@ const Context = ({ children }) => {
     ratings: faker.number.int({ min: 1, max: 5 }),
   }));
   console.log(products);
-
 
   const [state, dispatch] = useReducer(cartReducer, {
     products: products,
