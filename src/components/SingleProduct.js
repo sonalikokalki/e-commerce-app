@@ -15,7 +15,7 @@ const SingleProduct = ({ props }) => {
         <Card.Body>
           <Card.Title>{props.name}</Card.Title>
           <Card.Text>
-            <span>INR {props.price}</span>
+            <span>₹ {props.price}</span>
             {props.fastDelivery ? (
               <div>Fast Delivery</div>
             ) : (

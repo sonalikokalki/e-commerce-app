@@ -27,3 +27,21 @@
   width: 30%;
   margin: 10px;
 }
+.cart-item{
+  /* width: 500px; */
+  padding: 8px;
+  display: flex;
+  /* justify-content: center;
+   */
+   align-items: center;
+  gap: 10px;
+  flex: 1;
+
+}
+.cart-item-img {
+  width: 25%;
+  border-radius:5px;
+}
+.summary{
+  width: 30%;
+}
