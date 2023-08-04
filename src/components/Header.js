@@ -16,7 +16,7 @@ import './style.css'
 // import style from '.app.css'
 
 const Header = () => {
- const {state:{cart}, dispatch} = CartState();
+ const {state:{cart}, dispatch, productDispatch} = CartState();
   return (
     <Navbar bg="dark" variant="dark">
       <Container>
@@ -28,16 +28,20 @@ const Header = () => {
           <FormControl
             className="m-auto"
             placeholder="Search the product"
-            style={{ width: 500 }}
+            // style={{ minWidth: 500 }}
+            onClick={(e) => productDispatch({
+              type:'FILTER_BY_SEARCH',
+              payload:e.target.value
+            })}
           ></FormControl>
         </Navbar.Text>
-        <Dropdown align={'right'}>
+        <Dropdown >
           <Dropdown.Toggle variant="success" id="dropdown-basic">
             <FaShoppingCart color="white" fontSize="25px" />
             <Badge style={{margin:'3px'}}>{cart.length}</Badge>
           </Dropdown.Toggle>
 
-          <Dropdown.Menu style={{ width: 260 , marginTop:10, backgroundColor: '#DCDCDC'}}>
+          <Dropdown.Menu className = 'dropdown-menu'style={{ width: 260 , marginTop:10, backgroundColor: '#DCDCDC'}}>
             {
               cart.length > 0 ? (
                 <>

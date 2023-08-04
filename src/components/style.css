@@ -1,6 +1,9 @@
 .home {
   display: flex;
 }
+.search{
+  width:60%;
+}
 .product-container {
   width: 78%;
   display: flex;
@@ -44,4 +47,49 @@
 }
 .summary{
   width: 30%;
+}
+.dropdown-menu{
+  width: 260px ;
+  margin-top:10px;
+  background-color: #DCDCDC;
+}
+@media (max-width : 771px){
+  .filters{
+    width: 40%;
+    padding: 10px;
+    /* margin: 5px; */
+  }
+  .filter-title{
+    font-size: 25px;
+  }
+  .products{
+    width: 45%;
+  }
+  .search{
+    width: 50%;
+  }
+  /* .dropdown-menu{
+  margin-right: -100px;
+  } */
+}
+@media(max-width:430px){
+  .filters{
+    width: 50%;
+    padding: 10px;
+    margin: 5px;
+  }
+  .filter-title{
+    font-size: 20px;
+  }
+  .product-container{
+    padding:0;
+  }
+  .products{
+    width: 100%;
+    margin: 5px;
+  }
+  .search{
+    display: none !important;
+  }
+ 
 }
