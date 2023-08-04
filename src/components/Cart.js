@@ -39,13 +39,20 @@ const Cart = () => {
                     <Col md={2}>{item.name}</Col>
                     <Col md={2}>₹ {item.price}</Col>
                     <Rating rating={item.ratings} onClick={() => {}} />
-                    {/* <Col md={2}>
-                      <Form.Control value={item.qty}>
-                        {[...Array(item.inStock).keys()].map((x) => {
+                
+                    <Col md={2}>
+                      <Form.Control as={'select'} value={item.qty} onChange={(e) => dispatch({
+                        type : 'CHANGE_CART_QTY',
+                        payload: {
+                          id: item.id,
+                          qty:e.target.value
+                        }
+                      })} >
+                         {[...Array(item.inStock).keys()].map((x) => {
                           return (<option key={x + 1}>{x + 1}</option>);
                         })}
-                      </Form.Control>
-                    </Col> */}
+                        </Form.Control>
+                        </Col>
                     <Col md={2}>
                       <Button
                         type="button"
